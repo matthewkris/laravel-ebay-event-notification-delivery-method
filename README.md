@@ -1,4 +1,4 @@
-# Event Notification Delivery Method handler for Laravel 11
+# eBay Event Notification Delivery Method handler for Laravel 11
 
 This creates a valid endpoint for Marketplace Account Deletion which is required to access production data. I wrote this for Laravel 11 but can easily be adapted for other versions or frameworks. I thought this would be helpful to put out as the eBay docs are notoriously bad. You should expand the code below to actually handle the deletion request.
 
