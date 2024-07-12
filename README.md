@@ -1,11 +1,14 @@
-Event Notification Delivery Method handler for Laravel 11
+# Event Notification Delivery Method handler for Laravel 11
 
-# Route - must support both GET and POST. Exclude verifying the CSRF token.
+This creates a valid endpoint for Marketplace Account Deletion which is required to access production data. I wrote this for Laravel 11 but can easily be adapted for other versions or frameworks. I thought this would be helpful to put out as the eBay docs are notoriously bad. You should expand the code below to actually handle the deletion request.
+
+## Route
+Note - you must support both GET and POST (this was buried in the docs). Exclude verifying the CSRF token for the POST request as they won't be sending one along.
 ```
 Route::any('ebay-account-deletion-end-point', [EbayController::class, 'accountDeletionEndpoint'])
     ->withoutMiddleware([VerifyCsrfToken::class]);
 ```
-# Controller
+## Controller
 ```
 public function accountDeletionEndpoint(Request $request): JsonResponse
 {
